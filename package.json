@@ -1,0 +1,15 @@
+{
+  "name": "search-api-server",
+  "version": "1.0.0",
+  "description": "Simple json data for wanted-pre-onboarding",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "CH4MD0M",
+  "license": "ISC",
+  "dependencies": {
+    "heroku-keep-awake": "^1.1.2",
+    "json-server": "^0.17.0"
+  }
+}
