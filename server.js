@@ -27,7 +27,7 @@ server.options('*', cors());
 
 server.use(middlewares);
 server.use((req, res, next) => {
-  res.header('Date', Date.now());
+  res.header('Access-Control-Allow-Headers', 'Date');
   next();
 });
 
