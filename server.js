@@ -21,15 +21,13 @@ server.use(
     credentials: true,
     preflightContinue: false,
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    allowedHeaders: 'Date',
+    exposedHeaders: 'Date',
   })
 );
 server.options('*', cors());
 
 server.use(middlewares);
-server.use((req, res, next) => {
-  res.header('Access-Control-Allow-Headers', 'Date');
-  next();
-});
 
 server.use(jsonServer.bodyParser);
 server.use(router);
