@@ -26,6 +26,11 @@ server.use(
 server.options('*', cors());
 
 server.use(middlewares);
+server.use((req, res, next) => {
+  res.header('Date', Date.now());
+  next();
+});
+
 server.use(jsonServer.bodyParser);
 server.use(router);
 
