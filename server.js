@@ -4,7 +4,7 @@ const { wakeDyno } = require('heroku-keep-awake');
 
 const server = jsonServer.create();
 const router = jsonServer.router(data);
-const middlewares = jsonServer.defaults();
+const middlewares = jsonServer.defaults({ noCors: true });
 
 const port = process.env.PORT || 4000;
 
